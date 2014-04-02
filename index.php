@@ -17,13 +17,13 @@
 	<body>
 		<header>
 			<h1>Compiler</h1>
+			<button id="compileButton">Compile &amp; run</button>
 		</header>
 		
 
 	<div id="container">
 		<section id="leftcolumn">
 		<textarea id="sourceInput">
-
 		</textarea>
 		</section>
 		
@@ -46,7 +46,9 @@
         	mode: "text/x-csrc"
      		});
 	</script>
+		
 
+<!-- Start of the PHP script -->
 
 <?
 
