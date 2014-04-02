@@ -10,31 +10,46 @@
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="editor/lib/codemirror.js"></script>
 		<script src="editor/mode/clike/clike.js"></script>
+		<script src="editor/addon/edit/matchbrackets.js"></script>
 
 		<title>ICE-Compiler</title>
+
 	</head>
 
 	<body>
 		<header>
-			<h1>Compiler</h1>
-			<button id="compileButton">Compile &amp; run</button>
+			<h1>compiler</h1>
 		</header>
 		
 
 	<div id="container">
+		<form action="compile.php" method="post">
+		<input type="submit" id="compileButton" value="Compile & Run"/>
+
+
 		<section id="leftcolumn">
-		<textarea id="sourceInput">
-		</textarea>
+		<input type="text" name="prog" id="name" size="30" value="<?php echo $prog ?>" placeholder="Project name">
+<textarea id="sourceInput" name="code">
+<?php echo stripslashes($code) ?>
+</textarea>
 		</section>
-		
+
+
 
 	<section id="rightcolumn">
-		<input type="text" id="name" placeholder="Name of project">
-		<input type="text" id="stdin" placeholder="stdin">
-		<textarea id="output" disabled>
+		<input type="text" name="inputs" id="stdin" value="<?php echo $inp ?>" placeholder="stdin">
+		<textarea>
+<?php echo $outputtext ?>
 		</textarea>
 	</section>
 
+			<select name="lang"  id="languageSelector">
+				<option value="C">C</option>
+				<option value="C++">C++</option>
+				<option value="java">java</option>
+			</select>
+
+</form>
 	<script>
 			CodeMirror.commands.autocomplete = function(cm) {
   			CodeMirror.showHint(cm, CodeMirror.htmlHint);
@@ -46,7 +61,7 @@
         	mode: "text/x-csrc"
      		});
 	</script>
-		
+
 
 <!-- Start of the PHP script -->
 
