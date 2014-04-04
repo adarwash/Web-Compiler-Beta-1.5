@@ -44,10 +44,11 @@
 	</section>
 
 			<select name="lang"  id="languageSelector">
-				<option value="C">C</option>
-				<option value="C++">C++</option>
-				<option value="java">java</option>
-				<option value="php">PHP beta</option>
+				<option value="C">C Beta</option>
+				<option value="C++">C++ Beta</option>
+				<option value="java">Java Beta</option>
+				<option value="php">PHP Beta</option>
+				<option value="python">Python Beta</option>
 			</select>
 
 </form>

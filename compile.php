@@ -62,5 +62,17 @@ if($lang=="php")
 	$outputtext .= "$output";
 	shell_exec('rm '.$prog_name.' '.$prog.'.class');
 }
+if($lang=="python")
+{
+	$output=shell_exec('python3 '.$prog_name);
+	if(is_null($output))
+	{
+	$final_out=shell_exec('py'.$prog.' '.$cargs.' < inputs.tmp');
+	$outputtext.= $final_out;
+	}
+	else
+	$outputtext .= "$output";
+	shell_exec('rm '.$prog_name.' '.$prog.'.class');
+}
 include "index.php";
 ?>
