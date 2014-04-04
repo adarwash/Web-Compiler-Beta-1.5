@@ -24,7 +24,7 @@
 
 	<div id="container">
 		<form action="compile.php" method="post">
-		<input type="submit" id="compileButton" value="Compile & Run"/>
+		<input type="submit" name="run" id="compileButton" value="Compile & Run" />
 
 
 		<section id="leftcolumn">
@@ -47,6 +47,7 @@
 				<option value="C">C</option>
 				<option value="C++">C++</option>
 				<option value="java">java</option>
+				<option value="php">PHP beta</option>
 			</select>
 
 </form>
@@ -63,8 +64,3 @@
 	</script>
 
 
-<!-- Start of the PHP script -->
-
-<?
-
-?>

@@ -4,6 +4,8 @@ clear
 
 sudo install apt-get install php5
 
+sudo install apt-get install php5-cgi
+
 sudo apt-get install build-essential
 
 sudo apt-get install openjdk-7-jdk

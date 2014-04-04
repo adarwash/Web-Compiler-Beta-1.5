@@ -50,6 +50,17 @@ if($lang=="java")
 	$outputtext .= "$output";
 	shell_exec('rm '.$prog_name.' '.$prog.'.class');
 }
+if($lang=="php")
+{
+	$output=shell_exec('php-cgi '.$prog_name);
+	if(is_null($output))
+	{
+	$final_out=shell_exec('php'.$prog.' '.$cargs.' < inputs.tmp');
+	$outputtext.= $final_out;
+	}
+	else
+	$outputtext .= "$output";
+	shell_exec('rm '.$prog_name.' '.$prog.'.class');
+}
 include "index.php";
 ?>
-
