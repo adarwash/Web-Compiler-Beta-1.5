@@ -2,9 +2,9 @@ sudo apt-get update && sudo apt-get upgrade
 
 clear
 
-sudo install apt-get install php5
+sudo apt-get install php5
 
-sudo install apt-get install php5-cgi
+sudo apt-get install php5-cgi
 
 sudo apt-get install build-essential
 
