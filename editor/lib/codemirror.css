@@ -104,8 +104,11 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   line-height: 1;
   position: relative;
   overflow: hidden;
-  background: white;
+  background:#F5F5F5;
   color: black;
+  border-right-color: rgb(216, 216, 216);
+  border-right-style: solid;
+  border-right-width: 1px;
 }
 
 .CodeMirror-scroll {

@@ -4,7 +4,9 @@ $code=$_POST["code"];
 $cargs=$_POST["cargs"];
 $inp=$_POST["inputs"];
 $lang=$_POST["lang"];
-if($lang=="java") $prog_name=$_POST["prog"].'.java'; else if($lang=="C") $prog_name=$_POST["prog"].'.c'; else $prog_name=$_POST["prog"].'.cpp';
+if($lang=="java") $prog_name=$_POST["prog"].'.java'; else if($lang=="C") $prog_name=$_POST["prog"].'.c'; else if ($lang=="html") $prog_name=$_POST["prog"].'compile.html'; else if ($lang=="javascript") $prog_name=$_POST["prog"].'compile.html';
+
+else $prog_name=$_POST["prog"].'.cpp';
 $prog=$_POST["prog"];
 
 $finput=fopen("inputs.tmp","w+");
@@ -73,6 +75,30 @@ if($lang=="python")
 	else
 	$outputtext .= "$output";
 	shell_exec('rm '.$prog_name.' '.$prog.'.class');
+}
+if($lang=="html")
+{
+	$output=shell_exec('html '.$prog_name);
+	if(is_null($output))
+	{
+	$final_out=shell_exec('html'.$prog.' '.$cargs.' < inputs.tmp');
+	$outputtext.= $final_out;
+	}
+	else
+	$outputtext .= "$output";
+	//shell_exec('rm '.$prog_name.' '.$prog.'.class');
+}
+if($lang=="javascript")
+{
+	$output=shell_exec('javascript '.$prog_name);
+	if(is_null($output))
+	{
+	$final_out=shell_exec('javascript'.$prog.' '.$cargs.' < inputs.tmp');
+	$outputtext.= $final_out;
+	}
+	else
+	$outputtext .= "$output";
+	//shell_exec('rm '.$prog_name.' '.$prog.'.class');
 }
 include "index.php";
 ?>

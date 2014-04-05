@@ -38,10 +38,24 @@
 
 	<section id="rightcolumn">
 		<input type="text" name="inputs" id="stdin" value="<?php echo $inp ?>" placeholder="stdin">
-		<textarea>
-<?php echo $outputtext ?>
-		</textarea>
-	</section>
+		<input type="text" name="cargs" id="cargs" size="30" value="<?php echo $cargs ?>" placeholder="Command Line Arguments:">
+		<? 
+		if ($lang =="C"){
+		echo "<textarea>".$outputtext."</textarea>";
+		} else if ($lang =="C++"){ 
+			echo "<textarea>".$outputtext."</textarea>";
+		} else if ($lang =="java"){
+			echo"<textarea>".$outputtext."</textarea>";
+		} else if ($lang =="php"){
+			echo "<textarea>".$outputtext."</textarea>";
+		} else if ($lang =="python"){ 
+			echo "<textarea>".$outputtext."</textarea>";
+		} 	else if ($lang =="html"){
+			echo "<iframe src=".$prog_name." frameborder='0'  style='width: 100%; height: 100%;'></iframe>";
+		} else if ($lang =="javascript"){
+			echo "<iframe src=".$prog_name." frameborder='0'  style='width: 100%; height: 100%;'></iframe>";
+		} else echo "Welcome to ICE Compiler";?>
+			</section>
 
 			<select name="lang"  id="languageSelector">
 				<option value="C">C Beta</option>
@@ -49,6 +63,8 @@
 				<option value="java">Java Beta</option>
 				<option value="php">PHP Beta</option>
 				<option value="python">Python Beta</option>
+				<option value="html">HTML Beta</option>
+				<option value="javascript">JavaScrpit Beta</option>
 			</select>
 
 </form>
@@ -63,5 +79,4 @@
         	mode: "text/x-csrc"
      		});
 	</script>
-
 
