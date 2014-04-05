@@ -1,7 +1,7 @@
 Web-Compiler-Beta-1.2
 ===================
 
-Basic web compiler that only has C/C++.
+Basic web compiler that only has C/C++ Java PHP Python Ruby-(coming soon) HTML JavaScript 
 
 ##To install web compiler 
 
