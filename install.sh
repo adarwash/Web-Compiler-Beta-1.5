@@ -20,10 +20,6 @@ sudo apt-get install gcj-jdk
 
 sudo apt-get install ruby
 
-mkdir tmp
-
-chmod 777 tmp
-
 clear
 
 echo “Compiler has been installed”
