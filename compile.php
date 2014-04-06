@@ -16,6 +16,8 @@ fclose($finput);
 $file=fopen($prog_name,"w+");
 fputs($file,stripslashes($code));
 fclose($file);
+
+
 if($lang=="C")
 {
 	$output=shell_exec('gcc '.$prog_name.' -o '.$prog.'.out 2>&1');
