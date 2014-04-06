@@ -54,18 +54,27 @@
 			echo "<iframe src=".$prog_name." frameborder='0'  style='width: 100%; height: 100%;'></iframe>";
 		} else if ($lang =="javascript"){
 			echo "<iframe src=".$prog_name." frameborder='0'  style='width: 100%; height: 100%;'></iframe>";
+		} else if ($lang =="ruby"){
+			echo "<textarea>".$outputtext."</textarea>";
 		} else echo "Welcome to ICE Compiler";?>
 			</section>
 
-			<select name="lang"  id="languageSelector">
-				<option value="C">C Beta</option>
-				<option value="C++">C++ Beta</option>
-				<option value="java">Java Beta</option>
-				<option value="php">PHP Beta</option>
-				<option value="python">Python Beta</option>
-				<option value="html">HTML Beta</option>
-				<option value="javascript">JavaScrpit Beta</option>
-			</select>
+					<?php $arrayList = array('C','C++','Java','php','python','html','javascript','ruby');?>
+					<select name="lang" id="languageSelector"> 
+						<?php for($i=0;$i<count($arrayList);$i++)
+						{
+						  if($arrayList[$i]==$_POST['lang'])
+						{
+						  echo '<option selected ="selected" value="'.$arrayList[$i].'">'.$arrayList[$i].'</option>';
+						}
+						  else
+						{
+						  echo '<option value="'.$arrayList[$i].'">'.$arrayList[$i].'</option>';
+						}
+						}
+						?>
+					</select>
+
 
 </form>
 	<script>
@@ -79,4 +88,3 @@
         	mode: "text/x-csrc"
      		});
 	</script>
-
