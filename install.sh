@@ -14,9 +14,11 @@ apt-cache search jdk
 
 export JAVA_HOME=/usr/lib/jvm/java-7-openjdk
 
-export PATH=$PATH:/usr/lib/jvm/java-6-openjdk/bin
+export PATH=$PATH:/usr/lib/jvm/java-7-openjdk/bin
 
 sudo apt-get install gcj-jdk
+
+sudo apt-get install ruby
 
 mkdir tmp
 
