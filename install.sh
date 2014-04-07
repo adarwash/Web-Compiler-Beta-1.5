@@ -20,6 +20,8 @@ sudo apt-get install gcj-jdk
 
 sudo apt-get install ruby
 
+sudo apt-get install node-less yui-compressor
+
 clear
 
 echo “Compiler has been installed”
