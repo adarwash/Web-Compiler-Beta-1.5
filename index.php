@@ -56,10 +56,12 @@
 			echo "<iframe src=".$prog_name." frameborder='0'  style='width: 100%; height: 100%;'></iframe>";
 		} else if ($lang =="ruby"){
 			echo "<textarea>".$outputtext."</textarea>";
+		} else if ($lang =="less"){
+			echo "<textarea>".$outputtext."</textarea>";
 		} else echo "Welcome to ICE Compiler";?>
 			</section>
 
-					<?php $arrayList = array('C','C++','Java','php','python','html','javascript','ruby');?>
+					<?php $arrayList = array('C','C++','java','php','python','html','javascript','ruby','less');?>
 					<select name="lang" id="languageSelector"> 
 						<?php for($i=0;$i<count($arrayList);$i++)
 						{
