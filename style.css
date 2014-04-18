@@ -135,7 +135,7 @@ textarea{
 
 #container {
 	width:100%;
-	position: absolute;
+	position: fixed;
 	top: 44px;
 	bottom:0;
 }
@@ -162,7 +162,7 @@ textarea{
 header{
 	height: 44px;
 	width:100%;
-	position: absolute;
+	position: fixed;
 	top:0;
 	left:0;
 	background:#E64600;
