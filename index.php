@@ -12,6 +12,15 @@
 		<script src="editor/mode/clike/clike.js"></script>
 		<script src="editor/addon/edit/matchbrackets.js"></script>
 
+		<script src="editor/lib/codemirror.js"></script>
+<script src="editor/addon/edit/matchbrackets.js"></script>
+<script src="editor/mode/htmlmixed/htmlmixed.js"></script>
+<script src="editor/mode/xml/xml.js"></script>
+<script src="editor/mode/javascript/javascript.js"></script>
+<script src="editor/mode/css/css.js"></script>
+<script src="editor/mode/clike/clike.js"></script>
+<script src="editor/mode/php/php.js"></script>
+
 		<title>ICE-Compiler</title>
 
 	</head>
@@ -36,10 +45,10 @@
 
 
 
-	<section id="rightcolumn">
+	<section id="rightcolumn" >
 		<input type="text" name="inputs" id="stdin" value="<?php echo $inp ?>" placeholder="stdin">
 		<input type="text" name="cargs" id="cargs" size="30" value="<?php echo $cargs ?>" placeholder="Command Line Arguments:">
-		<? 
+		<?php 
 		if ($lang =="C"){
 		echo "<textarea>".$outputtext."</textarea>";
 		} else if ($lang =="C++"){ 
@@ -80,13 +89,17 @@
 
 </form>
 	<script>
-			CodeMirror.commands.autocomplete = function(cm) {
-  			CodeMirror.showHint(cm, CodeMirror.htmlHint);
-			}
+CodeMirror.commands.autocomplete = function(cm) {
+CodeMirror.showHint(cm, CodeMirror.htmlHint);
+}
 
-      		window.editor = CodeMirror.fromTextArea(document.getElementById("sourceInput"), {
-        	lineNumbers: true,
-       	 	matchBrackets: true,
-        	mode: "text/x-csrc"
-     		});
+window.editor = CodeMirror.fromTextArea(document.getElementById("sourceInput"), {
+lineNumbers: true,
+matchBrackets: true,
+mode: "application/x-httpd-php",
+indentUnit: 4,
+indentWithTabs: true
+});
 	</script>
+
+
