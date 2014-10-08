@@ -1,4 +1,4 @@
-Web-Compiler-Beta-1.4
+Web-Compiler-Beta-1.5
 ===================
 
 Basic web compiler that only has C/C++ Java PHP Python Ruby-(coming soon) HTML JavaScript 
@@ -24,3 +24,5 @@ Beta 1.2 - Improved UI, fixed PHP installation, and added HTML5 and JavaScript.
 Beta 1.3 - Improved the compile button and fixed small bugs.
 
 Beta 1.4 - Fixed the options after you compiled a code, updated codemirror to version 4.
+
+Beta 1.5 - In progress implementing login and a option to save code + Small bug fixes
