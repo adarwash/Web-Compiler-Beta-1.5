@@ -103,15 +103,21 @@ textarea{
 
 
 #stdin {
-	width:50%;
+	width:25%;
 	height: 20px;
 	float:left;
 }
 
 #cargs{
-	width:50%;
+	width:25%;
 	height:20px;
 	float:right;
+}
+
+#project_name {
+	width:50%;
+	height: 20px;
+	float:left;
 }
 
 #name {
@@ -168,4 +174,8 @@ header{
 	background:#E64600;
 
 	/*background: -webkit-linear-gradient(top, #3a4042, #515151);*/
+}
+
+.input_boxes{
+	width:100%;
 }
